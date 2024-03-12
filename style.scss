@@ -1,4 +1,4 @@
-body{
+body {
   background-color: #030141;
   font-family: "Manrope", sans-serif;
   height: 100svh;
@@ -7,21 +7,35 @@ body{
   overflow: hidden;
 }
 
-.roy-container{
+.roy-container {
   background-color: #0F0D70;
   color: #fff;
   clip-path: polygon(0 1%, 100% 0, 97% 100%, 1% 100%);
   height: 95svh;
-  @media screen and (max-width: 767px){
+
+  @media screen and (max-width: 767px) {
     padding-top: 5rem;
   }
 }
-.layer-1{
+
+.layer-1 {
   position: relative;
   z-index: 2;
   height: 100%;
+
 }
-.title{
+
+.layer-2 {
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100svh;
+}
+
+.title {
 
   position: relative;
   display: inline-block;
@@ -30,12 +44,14 @@ body{
   line-height: 49px;
   letter-spacing: 0em;
   text-align: center;
-  @media screen and (max-width: 767px){
+
+  @media screen and (max-width: 767px) {
     margin-top: 15%;
     font-size: 14px;
     line-height: 19.12px;
   }
-  &::after{
+
+  &::after {
     content: '';
     position: absolute;
     bottom: -15px;
@@ -47,34 +63,54 @@ body{
     transform-origin: bottom left;
   }
 }
-.title-pink{
+
+.title-pink {
   color: #FBCCE8;
-  font-family: "Dela Gothic One","Bakbak One", sans-serif;
+  font-family: "Dela Gothic One", "Bakbak One", sans-serif;
   font-weight: 400;
   font-size: 60px;
   background-color: #EC008C;
   //padding: 3rem;
   //clip-path: polygon(19.74% 16.9%, 73.19% 2.24%, 69.17% 52.46%, 73.33% 52.62%, 70.73% 95.29%, 30.12% 88.04%, 27.34% 57.86%, 21.44% 57.69%);
-  
 
-  @media screen and (max-width: 767px){
+
+  @media screen and (max-width: 767px) {
     font-size: 20px;
-  //  clip-path: polygon(83.5% 25.96%, 76.13% 55.02%, 83.91% 55.83%, 85.78% 75.42%, 17.84% 67.86%, 11.19% 30.3%);
+    //  clip-path: polygon(83.5% 25.96%, 76.13% 55.02%, 83.91% 55.83%, 85.78% 75.42%, 17.84% 67.86%, 11.19% 30.3%);
   }
 }
-.rotate{
+
+.rotate {
   transform: rotate(2deg);
 }
-.rotate-2{
+
+.rotate-2 {
   transform: rotate(-4.5deg);
 }
-.lion{ 
+
+.lion {
   z-index: 1;
   left: 0;
   height: 108px;
+  animation: turn 4s infinite;
 }
 
-.button{
+@keyframes turn {
+  0% {
+    rotate: (8deg);
+  }
+
+  50% {
+    rotate: (-20deg);
+  }
+
+  100% {
+    rotate: (8deg);
+  }
+}
+
+.btn {
+  position: relative;
   clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
   color: #fff;
   font-size: 40px;
@@ -82,78 +118,177 @@ body{
   font-weight: 700;
   background-color: #EC008C;
   border-radius: 0;
-  @media screen and (max-width: 767px){
+  animation: pulse 2s infinite;
+
+  @media screen and (max-width: 767px) {
     font-size: 14px;
     padding: 0.5rem 1.5rem;
   }
 }
-.arrow-container{
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.arrow-container {
   margin-top: auto;
   font-size: 14px;
   font-weight: 700;
   color: #FFAEDE;
   height: calc(53px + 3vw);
+  width: 70%;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
-.arrow-one{
+
+.arrow-one {
   background: #520979;
-  clip-path: polygon(0% 0%, 86.54% 0.00%, 100% 50%, 86.54% 95.83%, 0% 100%);
+  clip-path: polygon(0% 0%, 86.54% 0.00%, 100% 50%, 86.54% 100%, 0% 100%);
 
 }
-.arrow-two{
+
+.arrow-two {
   clip-path: polygon(83.65% 0.00%, 100% 50%, 83.65% 100%, 0% 100%, 15.38% 50%, 0% 0%);
   background: #520979;
 
 }
-.arrow-three{
+
+.arrow-three {
   clip-path: polygon(100% 0px, 100% 100%, 0% 100%, 14.42% 50.00%, 0% 0%);
   background: #520979;
 }
 
-.book{
+.book {
   z-index: 2;
   position: absolute;
-  height: 45%;
-  transform: rotate(13deg);
-  margin-left: -1.5rem;
-  bottom: -3%;
+  height: 80%;
+  bottom: 0;
+
+  @media screen and (max-width: 1024px) {
+    height: 45%;
+    transform: rotate(13deg);
+    margin-left: -1.5rem;
+    bottom: -3%;
+  }
+
+
 }
-.girl{
+
+.girl {
   z-index: 2;
   position: absolute;
   right: 0;
   height: 75%;
   bottom: -35%
 }
-.zig{
+
+.zig {
   position: absolute;
   z-index: 1;
   top: -10%;
   left: 0;
   width: calc(100%)
 }
-.zag{
+
+.zag {
   position: absolute;
   width: 150%;
   z-index: 1;
   bottom: 10%;
   right: 0;
 }
-.jamjar{
-  left: -55px;
+
+.jamjar {
   position: absolute;
-  z-index: 2;
-  top: calc(-130px + 3vh);
-  transform: rotate(124.6deg);
-  width: 50%;
-  max-width: 183px;
+  bottom: 0;
+  transform: rotate(-47deg);
+
+  @media screen and (max-width: 1024px) {
+    left: -45px;
+
+    z-index: 2;
+    top: calc(-100px + 3vh);
+    transform: rotate(124.6deg);
+    width: 50%;
+    max-width: 183px;
+  }
 }
-.jelly{
+
+.jelly {
   display: none;
-  @media screen and (max-width: 767px){
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
     display: block;
     z-index: 2;
-    position: absolute;
     top: -5%;
     left: 35%;
   }
+}
+
+.zeus {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  z-index: 2;
+  width: 158px;
+  transform: rotate(-23deg);
+}
+
+.container {
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  // outline: solid 1px red;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: none;
+    transform: scale(1);
+  }
+
+  5% {
+    text-shadow: 0 0 0 #FF25AF, 0 0 20px #FF25AF, 0 0 30px #FF25AF;
+    transform: scale(1.25);
+  }
+
+  60% {
+    text-shadow: 0 0 0 #FF25AF, 0 0 20px #FF25AF, 0 0 30px #FF25AF;
+    transform: scale(1.35);
+  }
+
+  100% {
+    text-shadow: none;
+    transform: scale(1);
+  }
+}
+
+#join {
+  animation: glow 10s infinite;
+  animation-delay: 0s;
+}
+
+#deposit {
+  animation: glow 10s infinite;
+  animation-delay: 1s;
+}
+
+#enjoy {
+  animation: glow 10s infinite;
+  animation-delay: 2s;
 }
