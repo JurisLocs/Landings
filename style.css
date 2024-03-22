@@ -16,6 +16,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .roy-container {
+    height: 90svh;
     padding-top: 5rem;
   }
 }
@@ -28,6 +29,10 @@ body {
 
 .layer-2 {
   overflow: hidden;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   top: 0;
   left: 0;
   position: absolute;
@@ -44,6 +49,8 @@ body {
   line-height: 49px;
   letter-spacing: 0em;
   text-align: center;
+  width: -moz-max-content;
+  width: max-content;
 }
 @media screen and (max-width: 767px) {
   .title {
@@ -69,11 +76,34 @@ body {
   font-family: "Dela Gothic One", "Bakbak One", sans-serif;
   font-weight: 400;
   font-size: 60px;
-  background-color: #EC008C;
+  margin-left: -120px;
+}
+@media screen and (max-width: 1439px) {
+  .title-pink {
+    font-size: 40px;
+    margin-top: 3rem;
+    margin-left: -60px;
+  }
 }
 @media screen and (max-width: 767px) {
   .title-pink {
     font-size: 20px;
+    margin-top: 16px;
+  }
+}
+
+.background-pink {
+  -webkit-clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+          clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #EC008C;
+  margin-top: -2px;
+  margin-left: -50px;
+}
+@media screen and (max-width: 1439px) {
+  .background-pink {
+    margin-left: -20px;
   }
 }
 
@@ -88,8 +118,13 @@ body {
 .lion {
   z-index: 1;
   left: 0;
-  height: 108px;
   animation: turn 4s infinite;
+  height: 300px;
+}
+@media screen and (max-width: 1439px) {
+  .lion {
+    height: 108px;
+  }
 }
 
 @keyframes turn {
@@ -103,7 +138,7 @@ body {
     rotate: 8deg;
   }
 }
-.btn {
+.button {
   position: relative;
   -webkit-clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
           clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
@@ -115,8 +150,11 @@ body {
   border-radius: 0;
   animation: pulse 2s infinite;
 }
+.button:active {
+  background-color: #b1026b;
+}
 @media screen and (max-width: 767px) {
-  .btn {
+  .button {
     font-size: 14px;
     padding: 0.5rem 1.5rem;
   }
@@ -139,7 +177,7 @@ body {
   font-weight: 700;
   color: #FFAEDE;
   height: calc(53px + 3vw);
-  width: 70%;
+  width: 60%;
 }
 @media screen and (max-width: 767px) {
   .arrow-container {
@@ -170,8 +208,9 @@ body {
   position: absolute;
   height: 80%;
   bottom: 0;
+  left: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1439px) {
   .book {
     height: 45%;
     transform: rotate(13deg);
@@ -180,28 +219,57 @@ body {
   }
 }
 
+.panda {
+  position: absolute;
+  width: 25%;
+  left: 15%;
+  bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .panda {
+    display: none;
+  }
+}
+
 .girl {
   z-index: 2;
   position: absolute;
   right: 0;
-  height: 75%;
-  bottom: -35%;
+  height: 100%;
+  bottom: -15%;
+}
+@media screen and (max-width: 1439px) {
+  .girl {
+    height: 75%;
+    bottom: -35%;
+  }
 }
 
 .zig {
   position: absolute;
   z-index: 1;
-  top: -10%;
+  top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .zig {
+    width: 100%;
+    top: -10%;
+  }
 }
 
 .zag {
   position: absolute;
-  width: 150%;
   z-index: 1;
-  bottom: 10%;
+  bottom: 0;
   right: 0;
+}
+@media screen and (max-width: 767px) {
+  .zag {
+    width: 150%;
+    bottom: 10%;
+  }
 }
 
 .jamjar {
@@ -209,7 +277,7 @@ body {
   bottom: 0;
   transform: rotate(-47deg);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1439px) {
   .jamjar {
     left: -45px;
     z-index: 2;
@@ -228,18 +296,24 @@ body {
     position: absolute;
     display: block;
     z-index: 2;
-    top: -5%;
+    top: -1%;
     left: 35%;
   }
 }
 
 .zeus {
   position: absolute;
-  top: 0;
-  right: -100px;
   z-index: 2;
-  width: 158px;
-  transform: rotate(-23deg);
+  bottom: -35%;
+  right: 5%;
+}
+@media screen and (max-width: 1439px) {
+  .zeus {
+    top: 0;
+    width: 158px;
+    transform: rotate(-23deg);
+    right: -100px;
+  }
 }
 
 .container {
@@ -281,4 +355,47 @@ body {
 #enjoy {
   animation: glow 10s infinite;
   animation-delay: 2s;
+}
+
+.terms {
+  color: #fff;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.005em;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .terms {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
+
+.link {
+  color: #fff;
+}
+.link:active {
+  color: #b6b6b6;
+}
+
+.pink {
+  color: #D1008C;
+}
+
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.desktop {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
