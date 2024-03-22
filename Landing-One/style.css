@@ -147,7 +147,7 @@ body {
   padding: 1rem 3rem;
   font-weight: 700;
   background-color: #EC008C;
-  border-radius: 0;
+  border: none;
   animation: pulse 2s infinite;
 }
 .button:active {
@@ -166,6 +166,31 @@ body {
   }
 }
 
+.shadow-pulse {
+  position: absolute;
+  width: 340px;
+  height: 100px;
+  -webkit-clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
+          clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
+  background-color: #b1026b;
+  margin-bottom: 14px;
+  animation: shadow-pulse 2s infinite;
+}
+@media screen and (max-width: 1439px) {
+  .shadow-pulse {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .shadow-pulse {
+    width: 129px;
+    height: 37px;
+    margin-top: 15px;
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -174,6 +199,20 @@ body {
     transform: scale(1.25);
   }
   100% {
+    transform: scale(1);
+  }
+}
+@keyframes shadow-pulse {
+  0% {
+    scale: 1;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.45);
+  }
+  100% {
+    opacity: 0;
     transform: scale(1);
   }
 }
