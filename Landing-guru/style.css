@@ -1,0 +1,248 @@
+body {
+  background-color: #110BCA;
+  font-family: "Manrope", sans-serif;
+  height: 100svh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.title {
+  background-color: #FBEBF5;
+  font-family: Manrope;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65.57px;
+  text-align: center;
+  color: #ED008C;
+  -webkit-clip-path: polygon(20% 0%, 100% 0, 92% 100%, 0 91%);
+          clip-path: polygon(20% 0%, 100% 0, 92% 100%, 0 91%);
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 0.5rem 5rem;
+}
+@media screen and (max-width: 1439px) {
+  .title {
+    margin-bottom: 0rem;
+    font-size: 26px;
+    margin-top: 1rem;
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .title {
+    padding: 0.5rem 2rem;
+    line-height: 17.97px;
+    font-size: 13px;
+    margin-top: 16px;
+  }
+}
+
+.title-pink {
+  color: #FBCCE8;
+  font-family: "Dela Gothic One", "Bakbak One", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+}
+@media screen and (max-width: 1439px) {
+  .title-pink {
+    font-size: 40px;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .title-pink {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+}
+
+.background-pink {
+  -webkit-clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+          clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #EC008C;
+  margin-top: -2px;
+  padding: 0 4rem;
+}
+
+.rotate-2 {
+  transform: rotate(-4.5deg);
+}
+
+.ded {
+  position: absolute;
+  bottom: 0;
+  transform: rotate(-2.53deg);
+  height: 70%;
+}
+@media screen and (max-width: 1439px) {
+  .ded {
+    height: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ded {
+    width: 50%;
+    height: auto;
+    bottom: calc(45% - 40vw);
+  }
+}
+
+.lion {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 70%;
+}
+@media screen and (max-width: 1439px) {
+  .lion {
+    height: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lion {
+    width: 50%;
+    height: auto;
+    bottom: calc(60% - 40vw);
+  }
+}
+
+.button {
+  position: relative;
+  -webkit-clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
+          clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
+  color: #fff;
+  font-size: 40px;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  background-color: #EC008C;
+  border: none;
+  animation: pulse 2s infinite;
+}
+.button:active {
+  background-color: #b1026b;
+}
+@media screen and (max-width: 1439px) {
+  .button {
+    font-size: 25px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .button {
+    font-size: 14px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.shadow-pulse {
+  position: absolute;
+  width: 340px;
+  height: 100px;
+  -webkit-clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
+          clip-path: polygon(1px 28.86%, 98.14% 2px, 91.27% 79.71%, 10.6% 98%);
+  background-color: #b1026b;
+  margin-top: 14px;
+  animation: shadow-pulse 2s infinite;
+}
+@media screen and (max-width: 1439px) {
+  .shadow-pulse {
+    width: 200px;
+    height: 60px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .shadow-pulse {
+    width: 129px;
+    height: 40px;
+    margin-top: 15px;
+  }
+}
+
+@keyframes shadow-pulse {
+  0% {
+    scale: 1;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.45);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.terms {
+  color: #FFE1FC;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.005em;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .terms {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}
+
+.link {
+  color: #FFE1FC;
+}
+.link:active {
+  color: #b6b6b6;
+}
+
+.pink {
+  color: #F34EBC;
+}
+
+.content {
+  z-index: 1;
+}
+
+.background {
+  z-index: 0;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.guru-purple {
+  background-color: #a3147b;
+  -webkit-clip-path: polygon(0 94%, 8% 38%, 100% 0, 100% 100%, 6% 100%);
+          clip-path: polygon(0 94%, 8% 38%, 100% 0, 100% 100%, 6% 100%);
+  position: absolute;
+  height: 100%;
+  right: 0;
+  z-index: auto;
+  width: 52%;
+}
+
+.guru-darkblue {
+  background-color: #161297;
+  -webkit-clip-path: polygon(0 0, 9% 0, 34% 8%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 9% 0, 34% 8%, 100% 100%, 0 100%);
+  position: relative;
+  z-index: auto;
+  width: 75%;
+}/*# sourceMappingURL=style.css.map */
