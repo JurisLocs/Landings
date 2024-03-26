@@ -78,7 +78,7 @@ body {
   font-size: 60px;
   margin-left: -120px;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .title-pink {
     font-size: 40px;
     margin-top: 3rem;
@@ -101,7 +101,7 @@ body {
   margin-top: -2px;
   margin-left: -50px;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .background-pink {
     margin-left: -20px;
   }
@@ -121,7 +121,7 @@ body {
   animation: turn 4s infinite;
   height: 300px;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .lion {
     height: 108px;
   }
@@ -153,7 +153,7 @@ body {
 .button:active {
   background-color: #b1026b;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .button {
     font-size: 25px;
     padding: 0.5rem 1.5rem;
@@ -176,7 +176,7 @@ body {
   margin-bottom: 14px;
   animation: shadow-pulse 2s infinite;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .shadow-pulse {
     width: 200px;
     height: 50px;
@@ -255,7 +255,7 @@ body {
   bottom: 0;
   left: 0;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .book {
     height: 65%;
     transform: rotate(13deg);
@@ -288,7 +288,7 @@ body {
   height: 100%;
   bottom: -15%;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .girl {
     height: 95%;
     bottom: -35%;
@@ -332,7 +332,7 @@ body {
   bottom: 0;
   transform: rotate(-47deg);
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .jamjar {
     left: -45px;
     z-index: 2;
@@ -363,7 +363,7 @@ body {
   transform: translateY(35%);
   right: 5%;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .zeus {
     top: 0;
     width: 198px;

@@ -1,20 +1,39 @@
 body {
-  background-color: #110BCA;
   font-family: "Manrope", sans-serif;
-  height: 100svh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  background-color: #1B1A60;
+}
+
+.container-fluid {
+  background-image: url(images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100svh;
+  padding: 0;
+}
+.container-2 {
+  background-color: #1B1A60;
+  color: #fff;
+}
+
+.rotate-180 {
+  transform: rotateY(180deg);
+}
+
+.content {
+  z-index: 3;
 }
 
 .title {
-  background-color: #FBEBF5;
-  font-family: Manrope;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 65.57px;
+  background-color: #E61829;
+  color: #FFFFFF;
+  font-family: "Dela Gothic One", "Bakbak One", sans-serif;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 84.12px;
   text-align: center;
-  color: #ED008C;
   -webkit-clip-path: polygon(20% 0%, 100% 0, 92% 100%, 0 91%);
           clip-path: polygon(20% 0%, 100% 0, 92% 100%, 0 91%);
   width: -moz-max-content;
@@ -25,6 +44,7 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .title {
+    line-height: 54.12px;
     margin-bottom: 0rem;
     font-size: 26px;
     margin-top: 1rem;
@@ -43,19 +63,41 @@ body {
 .title-pink {
   color: #FBCCE8;
   font-family: "Dela Gothic One", "Bakbak One", sans-serif;
+  text-align: center;
+}
+.title-pink .first {
+  font-size: 55px;
   font-weight: 400;
-  font-size: 60px;
+  line-height: 79.64px;
 }
 @media screen and (max-width: 1440px) {
-  .title-pink {
-    font-size: 40px;
-    margin-top: 2rem;
+  .title-pink .first {
+    font-size: 32px;
+    line-height: 52.78px;
+    margin-top: 1rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .title-pink {
-    font-size: 20px;
-    margin-top: 16px;
+  .title-pink .first {
+    font-size: 18px;
+    line-height: 21.78px;
+  }
+}
+.title-pink .second {
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 130.32px;
+}
+@media screen and (max-width: 1440px) {
+  .title-pink .second {
+    font-size: 40px;
+    line-height: 52.78px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .title-pink .second {
+    font-size: 26.96px;
+    line-height: 32.62px;
   }
 }
 
@@ -68,47 +110,14 @@ body {
   margin-top: -2px;
   padding: 0 4rem;
 }
+@media screen and (max-width: 767px) {
+  .background-pink {
+    padding: 0 2rem;
+  }
+}
 
 .rotate-2 {
   transform: rotate(-4.5deg);
-}
-
-.ded {
-  position: absolute;
-  bottom: 0;
-  transform: rotate(-2.53deg);
-  height: 70%;
-}
-@media screen and (max-width: 1440px) {
-  .ded {
-    height: 60%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .ded {
-    width: 50%;
-    height: auto;
-    bottom: calc(45% - 40vw);
-  }
-}
-
-.lion {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 70%;
-}
-@media screen and (max-width: 1440px) {
-  .lion {
-    height: 60%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .lion {
-    width: 50%;
-    height: auto;
-    bottom: calc(60% - 40vw);
-  }
 }
 
 .button {
@@ -214,35 +223,83 @@ body {
   color: #F34EBC;
 }
 
-.content {
-  z-index: 1;
+.bonus-conditions {
+  font-family: Manrope;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35.18px;
+  text-align: left;
+  color: #BCBBFF;
+}
+@media screen and (max-width: 767px) {
+  .bonus-conditions {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20.52px;
+    text-align: left;
+  }
 }
 
-.background {
+.phoenix {
+  z-index: 2;
+  position: absolute;
+  bottom: 130px;
+  left: 0;
+  max-height: 80%;
+}
+@media screen and (max-width: 1440px) {
+  .phoenix {
+    height: 70%;
+    bottom: calc(36% - 10vw);
+    max-height: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .phoenix {
+    height: 30%;
+    bottom: calc(45% - 10vw);
+  }
+}
+
+.lion {
   z-index: 0;
-  display: flex;
   position: absolute;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-}
-
-.guru-purple {
-  background-color: #a3147b;
-  -webkit-clip-path: polygon(0 94%, 8% 38%, 100% 0, 100% 100%, 6% 100%);
-          clip-path: polygon(0 94%, 8% 38%, 100% 0, 100% 100%, 6% 100%);
-  position: absolute;
-  height: 100%;
   right: 0;
-  z-index: auto;
-  width: 52%;
+  height: 645px;
+  bottom: 8vw;
+}
+@media screen and (max-width: 1440px) {
+  .lion {
+    height: 489px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .lion {
+    height: 284px;
+  }
 }
 
-.guru-darkblue {
-  background-color: #161297;
-  -webkit-clip-path: polygon(0 0, 9% 0, 34% 8%, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 9% 0, 34% 8%, 100% 100%, 0 100%);
-  position: relative;
-  z-index: auto;
-  width: 75%;
+.vectors {
+  height: 284px;
+}
+
+.blue-vector {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.pink-vector {
+  -webkit-clip-path: polygon(0 78.33%, 100% 0px, 100% 100%, 0% 100%);
+          clip-path: polygon(0 78.33%, 100% 0px, 100% 100%, 0% 100%);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #1B1A60;
+}
+
+.pink-vector-2 {
+  width: 100%;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */
