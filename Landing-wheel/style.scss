@@ -1,0 +1,145 @@
+body {
+  background-color: #030141;
+  font-family: "Manrope", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.content{
+  background-image: url(images/Background_desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100svh;
+  width: 100%;
+}
+
+.title-pink {
+  color: #FBCCE8;
+  font-family: "Dela Gothic One", "Bakbak One", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 77.8px;
+  transform: rotate(-1.43deg);
+  margin-left: 4rem;
+  .first{
+    width: max-content;
+    padding-left: 2rem;
+    padding-right: 12rem;
+    @media screen and (max-width: 1440px) {
+
+    }
+    @media screen and (max-width: 767px) {
+
+    }
+  }
+  .second{
+    width: max-content;
+    padding-left: 6rem;
+    padding-right: 8rem;
+    @media screen and (max-width: 1440px) {
+
+    }
+    @media screen and (max-width: 767px) {
+
+    }
+  }
+}
+.background-pink {
+  clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
+
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #F205A3;
+  margin-top: -2px;
+  padding: 0 4rem;
+  @media screen and (max-width: 767px) {
+    padding: 0 2rem;
+  }
+}
+
+.second-title {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  font-family: Manrope;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 42.44px;
+  text-align: center;
+  
+
+  @media screen and (max-width: 767px) {
+    margin-top: 15%;
+    font-size: 14px;
+    line-height: 19.12px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #F205A3;
+    transform: rotate(-2deg);
+    transform-origin: bottom left;
+  }
+}
+
+.button {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  color: #fff;
+  font-size: 40px;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  background-color: #EC008C;
+  border: none;
+  animation: pulse 2s infinite;
+  &:active{
+    background-color: #b1026b;
+
+  }
+  @media screen and (max-width: 1440px) {
+    font-size: 25px;
+    padding: 0.5rem 1.5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.wheel-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+.woman{
+  position: absolute;
+  bottom: 0;
+  height: 30vw;
+  left: -20%;
+}
+.wheel{ 
+
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  height: 70%;
+}
