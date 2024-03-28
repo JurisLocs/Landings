@@ -13,6 +13,15 @@ body {
   height: 100svh;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .content {
+    background-image: url(images/background_mobile.svg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .title-pink {
   color: #FBCCE8;
@@ -23,11 +32,32 @@ body {
   transform: rotate(-1.43deg);
   margin-left: 4rem;
 }
+@media screen and (max-width: 1440px) {
+  .title-pink {
+    line-height: 50.8px;
+    font-size: 35px;
+    margin-left: 6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .title-pink {
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+  }
+}
 .title-pink .first {
   width: -moz-max-content;
   width: max-content;
   padding-left: 2rem;
   padding-right: 12rem;
+}
+@media screen and (max-width: 767px) {
+  .title-pink .first {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 .title-pink .second {
   width: -moz-max-content;
@@ -35,6 +65,13 @@ body {
   padding-left: 6rem;
   padding-right: 8rem;
 }
+@media screen and (max-width: 767px) {
+  .title-pink .second {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 .background-pink {
   -webkit-clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
@@ -46,7 +83,8 @@ body {
 }
 @media screen and (max-width: 767px) {
   .background-pink {
-    padding: 0 2rem;
+    -webkit-clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+            clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
   }
 }
 
@@ -59,6 +97,13 @@ body {
   font-weight: 700;
   line-height: 42.44px;
   text-align: center;
+}
+@media screen and (max-width: 1440px) {
+  .second-title {
+    margin-top: 15%;
+    font-size: 20px;
+    line-height: 25.12px;
+  }
 }
 @media screen and (max-width: 767px) {
   .second-title {
@@ -123,17 +168,111 @@ body {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 767px) {
+  .wheel-container {
+    height: auto;
+  }
+}
 
 .woman {
+  z-index: 2;
   position: absolute;
   bottom: 0;
   height: 30vw;
   left: -20%;
 }
+@media screen and (max-width: 767px) {
+  .woman {
+    display: none;
+  }
+}
+
+.wheel-background {
+  top: calc(100% - 48vw);
+  position: absolute;
+  z-index: 1;
+  left: 21%;
+  width: 44vw;
+}
+@media screen and (max-width: 767px) {
+  .wheel-background {
+    position: static;
+    width: 70%;
+  }
+}
 
 .wheel {
+  top: calc(100% - 45vw);
+  z-index: 2;
   position: absolute;
-  left: 30%;
-  top: 15%;
-  height: 70%;
+  left: 27%;
+  width: 38vw;
+  animation-duration: 10s;
+  animation-name: rotate;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 767px) {
+  .wheel {
+    left: auto;
+    top: auto;
+    width: 60%;
+  }
+}
+
+.arrow {
+  top: calc(100% - 46vw);
+  left: 56.6%;
+  z-index: 3;
+  position: absolute;
+  width: 5vw;
+}
+@media screen and (max-width: 767px) {
+  .arrow {
+    left: auto;
+    top: 1rem;
+    width: 6%;
+  }
+}
+
+.roy-logo {
+  top: calc(100% - 30vw);
+  position: absolute;
+  z-index: 3;
+  left: 54%;
+  width: 7vw;
+}
+@media screen and (max-width: 767px) {
+  .roy-logo {
+    left: auto;
+    width: 9%;
+    top: auto;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-3935deg);
+  }
+}
+.mobile {
+  display: none !important;
+}
+@media screen and (max-width: 767px) {
+  .mobile {
+    display: block !important;
+  }
+}
+
+.desktop {
+  display: block !important;
+}
+@media screen and (max-width: 767px) {
+  .desktop {
+    display: none !important;
+  }
 }/*# sourceMappingURL=style.css.map */

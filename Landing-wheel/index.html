@@ -16,20 +16,34 @@
   <div class="container-fluid">
     <div class="content">
       <div class="row h-100">
-        <div class="col-5 d-flex flex-column align-items-center ">
-          <div class="title-pink rotate my-5">
+        <div class="col-md-5 d-flex flex-column align-items-center ">
+          <div class="title-pink rotate mt-5 my-md-5">
             <div class="first background-pink">Вращай и</div>
             <div class="second background-pink">выигрывай!</div>
           </div>
+          <div class="wheel-container mobile">
+            <div class="d-flex justify-content-center align-items-center">
+              <img class="wheel-background" src="images/Wheel_border.svg">
+              <img id="wheel" class="wheel" src="images/Wheel.svg">
+              <img class="roy-logo" src="images/Middle_button.svg">
+              <img class="arrow" src="images/arrow.svg">
+            </div>
+
+          </div>
           <div class="second-title">Воспользуйся шансом <br> получить особый бонус</div>
-            <button class="button my-3 mt-5">
+            <button id="button" class="button my-3 mt-5" onclick="spin()">
               <div class="">Крути сейчас</div>
             </button>
         </div>
         <div class="col-7">
-          <div class="wheel-container">
-            <img class="woman" src="images/woman.webp">
-            <img class="wheel" src="images/Wheel.svg">
+          <div class="wheel-container desktop">
+            <img id="woman" class="woman" src="images/woman.webp">
+            <div>
+              <img class="wheel-background" src="images/Wheel_border.svg">
+              <img id="wheel2" class="wheel" src="images/Wheel.svg">
+              <img class="roy-logo" src="images/Middle_button.svg">
+              <img class="arrow" src="images/arrow.svg">
+            </div>
           </div>
         </div>
       </div>
@@ -39,6 +53,14 @@
 
 
   </div>
+  <script>
+    function spin(){
+      document.getElementById("woman").src = "images/woman.webp";
 
+      document.getElementById('wheel').style.animationPlayState = 'running';
+      document.getElementById('wheel2').style.animationPlayState = 'running';
+    };
+  </script>
 </body>
+
 </html>

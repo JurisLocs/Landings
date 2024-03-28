@@ -11,6 +11,13 @@ body {
   background-repeat: no-repeat;
   height: 100svh;
   width: 100%;
+  @media screen and (max-width: 767px) {
+    background-image: url(images/background_mobile.svg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .title-pink {
@@ -21,28 +28,36 @@ body {
   line-height: 77.8px;
   transform: rotate(-1.43deg);
   margin-left: 4rem;
+  @media screen and (max-width: 1440px) {
+    line-height: 50.8px;
+    font-size: 35px;
+    margin-left: 6rem;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+  }
   .first{
     width: max-content;
     padding-left: 2rem;
     padding-right: 12rem;
-    @media screen and (max-width: 1440px) {
-
-    }
     @media screen and (max-width: 767px) {
-
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
   }
   .second{
     width: max-content;
     padding-left: 6rem;
     padding-right: 8rem;
-    @media screen and (max-width: 1440px) {
-
-    }
     @media screen and (max-width: 767px) {
-
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
   }
+  
 }
 .background-pink {
   clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
@@ -53,7 +68,7 @@ body {
   margin-top: -2px;
   padding: 0 4rem;
   @media screen and (max-width: 767px) {
-    padding: 0 2rem;
+    clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
   }
 }
 
@@ -66,7 +81,11 @@ body {
   font-weight: 700;
   line-height: 42.44px;
   text-align: center;
-  
+  @media screen and (max-width: 1440px) {
+    margin-top: 15%;
+    font-size: 20px;
+    line-height: 25.12px;
+  }
 
   @media screen and (max-width: 767px) {
     margin-top: 15%;
@@ -128,18 +147,96 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 767px) {
+    height: auto;
+  }
 
 }
 .woman{
+  z-index: 2;
   position: absolute;
   bottom: 0;
   height: 30vw;
   left: -20%;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.wheel-background{
+  top: calc(100% - 48vw);
+  position: absolute;
+  z-index: 1;
+  left: 21%;
+  width: 44vw;
+  @media screen and (max-width: 767px) {
+    position: static;
+    width: 70%;
+    
+  }
 }
 .wheel{ 
-
+  top: calc(100% - 45vw);
+  z-index: 2;
   position: absolute;
-  left: 30%;
-  top: 15%;
-  height: 70%;
+  left: 27%;
+  width: 38vw;
+  animation-duration: 10s;
+  animation-name: rotate;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @media screen and (max-width: 767px) {
+    left: auto;
+    top: auto;
+    width: 60%;
+  }
+}
+.arrow{
+  top: calc(100% - 46vw);
+  left: 56.6%;
+  z-index: 3;
+  position: absolute;
+  width: 5vw;
+  @media screen and (max-width: 767px) {
+    left: auto;
+    top: 1rem;
+    width: 6%;
+  }
+}
+.roy-logo{
+  top: calc(100% - 30vw);
+  position: absolute;
+  z-index: 3;
+  left: 54%;
+  width: 7vw;
+  @media screen and (max-width: 767px) {
+    left: auto;
+    width: 9%;
+    top: auto;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-3935deg);
+  }
+}
+
+.mobile {
+  display: none !important;
+
+  @media screen and (max-width: 767px) {
+    display: block !important;
+  }
+}
+
+.desktop {
+  display: block !important;
+
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
 }
